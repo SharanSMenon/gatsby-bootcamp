@@ -7,6 +7,7 @@ const AboutPage = () => {
         <Layout>
             <h1>About</h1>
             <h2>I'm Sharan, a full stack developer living in Maryland</h2>
+            <p>I have a lot of interests like mathematics, programming, machine learning, etc.</p>
             <p>Want to work with me? <Link to="/contact">Contact me.</Link></p>
         </Layout>
     )
