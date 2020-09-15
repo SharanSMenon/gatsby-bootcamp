@@ -14,6 +14,11 @@ const BlogPage = () => {
                         author
                         slug
                         publishedDate(formatString:"MMMM Do, YYYY")
+                        childContentfulBlogPostContentTextNode {
+                            childMarkdownRemark {
+                                timeToRead
+                            }
+                        }
                     }
                 }
             }   
@@ -32,7 +37,7 @@ const BlogPage = () => {
                             <li key={i} className={blogStyles.post}>
                                 <Link to={`/blog/${edge.node.slug}`}>
                                     <h3>{edge.node.title}</h3>
-                                    <p>{edge.node.publishedDate} - {edge.node.author}</p>
+                                    <p>{edge.node.publishedDate} - {edge.node.childContentfulBlogPostContentTextNode.childMarkdownRemark.timeToRead} min read</p>
                                 </Link>
                             </li>
                         )
